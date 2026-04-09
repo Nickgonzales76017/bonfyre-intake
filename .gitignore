@@ -1,0 +1,19 @@
+# Build outputs
+*.o
+*.a
+*.so
+*.dylib
+/cmd/*/bonfyre-*
+/vendor/bonfyre-core/lib/libbonfyre/obj/
+/vendor/bonfyre-core/lib/libbonfyre/test_bonfyre
+/vendor/bonfyre-core/lib/libbonfyre/libbonfyre.a
+/vendor/bonfyre-core/lib/libbonfyre/libbonfyre.so
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temp/output
+tmp/
+dist/
+build/

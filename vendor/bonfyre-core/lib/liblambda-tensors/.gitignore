@@ -1,0 +1,14 @@
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+test_lambda_tensors
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
