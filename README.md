@@ -46,7 +46,7 @@ Source inventory and rationale live in:
 - `cmd/`
   - intake binaries
 - `vendor/bonfyre-core/`
-  - temporary local dependency snapshot for extraction validation
+  - temporary local dependency slice for extraction validation
 - `docs/`
   - extraction docs and dependency notes
 
@@ -69,7 +69,9 @@ Source inventory and rationale live in:
 
 ## Dependency Note
 
-During extraction, this repo vendors a local snapshot of `bonfyre-core` under
-`vendor/bonfyre-core/` so the binaries can build against a stable local path.
+During extraction, this repo vendors the minimum current `bonfyre-core` dependency
+surface under `vendor/bonfyre-core/` so the binaries can build against a stable local path.
 
-That is a transition step for migration validation, not the long-term coupling model.
+Right now that vendored surface is just `lib/libbonfyre/`.
+
+This is a transition step for migration validation, not the long-term coupling model.

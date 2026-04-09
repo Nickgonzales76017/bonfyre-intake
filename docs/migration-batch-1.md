@@ -94,7 +94,7 @@ Batch 1 is complete when:
 
 ## Current Validation Strategy
 
-- vendor a local snapshot of `bonfyre-core` under `vendor/bonfyre-core/`
+- vendor the minimum required `bonfyre-core` slice under `vendor/bonfyre-core/`
 - point intake Makefiles at `../../vendor/bonfyre-core/lib/libbonfyre`
 - verify the non-whisper commands first
 - treat `bonfyre-transcribe` as a dependency-aware build because it also needs the Homebrew whisper stack
