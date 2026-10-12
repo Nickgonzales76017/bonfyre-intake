@@ -6,6 +6,25 @@
 
 People building recording workflows, transcript preparation, searchable media or source-preserving import tools.
 
+## Shared native dependency
+
+The previous `vendor/bonfyre-core` files matched the
+[`bonfyre-core/lib/libbonfyre`](https://github.com/Nickgonzales76017/bonfyre-core/tree/main/lib/libbonfyre)
+Git tree exactly. That duplicate is now a pinned public submodule, with the
+original C include/link path retained.
+
+```sh
+git clone https://github.com/Nickgonzales76017/bonfyre-intake.git
+cd bonfyre-intake
+git submodule update --init -- vendor/bonfyre-core
+make -C vendor/bonfyre-core/lib/libbonfyre
+```
+
+Build the particular intake command you need from its existing `cmd/` Makefile
+and review its other media/model dependencies separately. This earlier
+extraction is not the current integrated runtime source and dependencies
+are only updated through explicit Gitlink commits.
+
 ## Source and scope
 
 This repository preserves an **April 2026 source extraction**. It contains `cmd/`, `vendor/` and extraction notes. That material remains useful for inspection and for understanding a component boundary, but it is not the latest canonical source or an independently supported package release.
