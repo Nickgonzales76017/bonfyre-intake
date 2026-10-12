@@ -1,0 +1,3 @@
+[submodule "vendor/bonfyre-core"]
+	path = vendor/bonfyre-core
+	url = https://github.com/Nickgonzales76017/bonfyre-core.git
