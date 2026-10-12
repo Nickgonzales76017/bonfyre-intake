@@ -1,77 +1,25 @@
-# bonfyre-intake
+<p align="center"><img src="https://github.com/user-attachments/assets/7785a8d6-6e28-4892-8958-3daf85414f05" width="80" alt="Bonfÿre knight" /></p>
 
-Media and text intake layer for the Bonfyre runtime.
+# Bonfÿre Intake
 
-This repo is the first dependent extraction built on top of `bonfyre-core`.
-It is intended to become the canonical home for:
+**Audio, text and artifact preparation.**
 
-- ingestion binaries
-- media preprocessing
-- transcription entrypoints
-- transcript cleanup and paragraphization
-- transcript family grouping
-- intake-adjacent dictionaries and utilities
+People building recording workflows, transcript preparation, searchable media or source-preserving import tools.
 
-## Why This Exists
+## Source and scope
 
-`bonfyre-core` now owns the shared substrate and core runtime library.
+This repository preserves an **April 2026 source extraction**. It contains `cmd/`, `vendor/` and extraction notes. That material remains useful for inspection and for understanding a component boundary, but it is not the latest canonical source or an independently supported package release.
 
-`bonfyre-intake` exists so the input-facing binaries can evolve together without
-staying mixed into the stage integration repo.
+The [current Bonfÿre development lineage](https://github.com/Nickgonzales76017/bonfyre) owns the integrated version: [`cmd/BonfyreIngest/`](https://github.com/Nickgonzales76017/bonfyre/tree/main/cmd/BonfyreIngest/). Later source changes are reviewed and published separately from private runtime state.
 
-The current live source for these binaries is:
+The older extraction kept temporary vendored dependencies and original migration notes. They are not an additional source of truth; check the [current repository](https://github.com/Nickgonzales76017/bonfyre) for the version, license, operating contract and tests relevant to your use.
 
-- `/Users/nickgonzales/Projects/bonfyre-oss/cmd/*`
+## See the work in context
 
-This repo is the extraction target for intake-specific runtime modules from that live tree.
+- [Aurekai work samples](https://aurekai-work-samples.pages.dev/) — customer-facing tools and handoffs
+- [Bonfÿre developer and product guides](https://docs.aurekai.work/) — integrated operations and technical contexts
+- [Client integration examples](https://github.com/Nickgonzales76017/bonfyre/blob/main/docs/client-operations-portfolio.md) — real kinds of receiving-system work
 
-## Initial Scope
+For an **independently scoped native-C example** with its own build and verification fixtures, see [Bonfÿre Statement Import](https://github.com/Nickgonzales76017/bonfyre-statement-import).
 
-First migration batch:
-
-- `BonfyreIngest`
-- `BonfyreMediaPrep`
-- `BonfyreMFADict`
-- `BonfyreParagraph`
-- `BonfyreTranscribe`
-- `BonfyreTranscriptClean`
-- `BonfyreTranscriptFamily`
-
-Source inventory and rationale live in:
-
-- [docs/migration-batch-1.md](/Users/nickgonzales/Projects/bonfyre-intake/docs/migration-batch-1.md)
-
-## Intended Layout
-
-- `cmd/`
-  - intake binaries
-- `vendor/bonfyre-core/`
-  - temporary local dependency slice for extraction validation
-- `docs/`
-  - extraction docs and dependency notes
-
-## Relationship To Other Repos
-
-- `bonfyre-core`
-  - shared substrate, contracts, and core runtime library
-- `bonfyre-intake`
-  - input-facing runtime binaries
-- `bonfyre-intelligence`
-  - analysis, retrieval, indexing, brief, proof
-- `bonfyre-publish`
-  - render, emit, narrate, pack, distribute
-- `bonfyre-control`
-  - orchestration, API, auth, runtime control plane
-- `bonfyre-oss`
-  - stage integration and shared workflows
-- `bonfyre`
-  - prod integration and promoted releases
-
-## Dependency Note
-
-During extraction, this repo vendors the minimum current `bonfyre-core` dependency
-surface under `vendor/bonfyre-core/` so the binaries can build against a stable local path.
-
-Right now that vendored surface is just `lib/libbonfyre/`.
-
-This is a transition step for migration validation, not the long-term coupling model.
+The license accompanying this extraction governs its own files; the canonical repo and independent components may have different terms.
