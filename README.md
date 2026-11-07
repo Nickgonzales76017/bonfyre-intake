@@ -6,6 +6,19 @@
 
 People building recording workflows, transcript preparation, searchable media or source-preserving import tools.
 
+## Aurekai / Bonfÿre: role and maturity
+
+**Why this exists:** AI can generate software faster than teams can coordinate it. [Aurekai](https://aurekai.work) invests engineering and reusable software into connected public and commercial experiences; [Bonfÿre](https://github.com/Nickgonzales76017/bonfyre) supplies the native capabilities, source context, authorized work and verification that make projects compound.
+
+| | This repository |
+|---|---|
+| **Business outcome** | Source-preserving recording and document workflows |
+| **Technical scope** | Media/text intake and preparation components |
+| **Maturity boundary** | April 2026 extraction with a pinned core submodule; model/build dependencies vary |
+| **Verification** | Inspect the source, build instructions, fixtures and limitations below; this repository is not proof of a live Aurekai release. |
+
+[Business, project and technical model](https://github.com/Nickgonzales76017/bonfyre/blob/main/docs/aurekai-bonfyre-model.md) · [Current canonical implementation](https://github.com/Nickgonzales76017/bonfyre)
+
 ## Shared native dependency
 
 The previous `vendor/bonfyre-core` files matched the
